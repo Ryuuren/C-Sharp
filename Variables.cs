@@ -29,7 +29,18 @@ namespace app
             // Must begin with an alphanumeric or _, not a number ( _ is generally for special cases)
             // Variables are case sensitive.
             // Must not be a C# keyword, e.g. string string
-
+            // 
+            // Variables can also be implicitly typed, that is, it's data type is implied by the assigned value:
+            var myGreeting = "Hello World!";
+            // myGreeting will be typed as string and cannot be changed
+            // Other languages like JavaScript use var differently.
+            // In C#, variables are type locked upon declaration, whether explicitly or implicitly typed.
+            // Variables declared with var must be initialised:
+            // var = message;
+            // Logging the above variable will result in an error as it was not initialised with a value and thus cannot be implicitly typed.
+            Console.WriteLine("I'm using C# to write " + myGreeting);
+            //
+            // The var keyword is useful in C# if the variable type is obvious when initialised, or during development when required types are still ambigiuous.
         }
     }
 }
