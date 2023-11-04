@@ -44,9 +44,18 @@ namespace app
             Console.WriteLine($"{greeting} there, {firstName}!");
             //
             // Finally, you can combine verbatim literals with string interpolation:
-            string projectName = "First-Project";
-            Console.WriteLine($@"C:\Output\{projectName}\Data");
+            string newProjectName = "First-Project";
+            Console.WriteLine($@"C:\Output\{newProjectName}\Data");
             // The above lets us reference the variable for the file path, while also avoiding the need for escape characters by using @
+            //
+            // The following is the completed challenge for this part of the C# learning module:
+            string projectName = "ACME";
+
+            string russianMessage = "\u041f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u0432\u044b\u0432\u043e\u0434";
+
+            Console.WriteLine($"View English output:\n\tc:\\Exercise\\{projectName}\\data.txt\n");
+
+            Console.WriteLine($"{russianMessage}:\n\tc:\\Exercise\\{projectName}\\ru-RU\\data.txt\n");
         }
     }
 }
